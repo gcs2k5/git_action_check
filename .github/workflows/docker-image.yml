@@ -42,11 +42,11 @@ jobs:
             echo "Deployment exists. Updating image..."
 
             kubectl set image deployment/test \
-              myapp=sankworld/myapp:${{ github.sha }}
+              myapp=gcs2k25docke/myapp:${{ github.sha }}
           else
             echo "Deployment does not exist. Creating it..."
 
             kubectl create deployment test \
-              --image=sankworld/myapp:${{ github.sha }}
+              --image=gcs2k25docke/myapp:${{ github.sha }}
           fi
       
